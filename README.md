@@ -1,6 +1,6 @@
 # `cavif` — PNG/JPEG to AVIF converter
 
-Encoder/converter for AVIF images. Based on [`rav1e`](https://lib.rs/crates/rav1e) and [`avif-serialize`](https://lib.rs/crates/avif-serialize) via the [`ravif`](https://lib.rs/crates/ravif) crate, which makes it an almost pure-Rust tool (it uses C LCMS2 for color profiles).
+Encoder/converter for AVIF images. Based on [`rav1e`](https://lib.rs/crates/rav1e) and [`avif-serialize`](https://lib.rs/crates/avif-serialize) via the [`ravif`](https://lib.rs/crates/ravif) crate, which makes it a pure-Rust tool.
 
 ## Installation
 
@@ -46,19 +46,9 @@ There are additional options that tweak AVIF color space. The defaults in `cavif
 
 Images [work in all modern browsers](https://caniuse.com/avif).
 
-* Chrome 85+ desktop,
-* Chrome on Android 12,
-* Firefox 91,
-* Safari iOS 16/macOS Ventura.
-
-### Known incompatibilities
-
-* Windows' preview and very old versions of android are reported to show pink line at the right edge. This is probably a bug in an old AVIF decoder they use.
-* Windows' preview doesn't seem to support 10-bit deep images. Use `--depth=8` when encoding if this is a problem.
-
 ## Building
 
-To build it from source you need Rust 1.67 or later, preferably via [rustup](https://rustup.rs).
+To build it from source you need Rust 1.90 or later, preferably via [rustup](https://rustup.rs).
 
 Then run in a terminal:
 
